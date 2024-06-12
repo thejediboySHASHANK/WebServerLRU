@@ -32,3 +32,10 @@ Upon launching, the server begins listening for incoming TCP connections. When a
 - If not cached, forwards the request to the designated remote server, retrieves the response, sends it back to the client, and stores it in the cache.
 
 This architecture not only enhances the responsiveness of the proxy server but also significantly reduces unnecessary network traffic by serving repeated requests directly from the cache.
+
+
+# Demo
+
+![cache1](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/447c9c1c-0600-4c24-ae07-4f8f1273f09b)
+![cache2](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/b0273da1-947c-4b4d-8df8-1d6dfed511d6)
+
