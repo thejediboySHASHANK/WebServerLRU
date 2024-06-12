@@ -3,8 +3,8 @@
 This project has been implemented utlising C programming langugaes, Data Structures and HTTP parsing library from Proxy Server.
 
 ## Table of Contents
-- [Key Features](#overview)
-- [How It Works](#how-it-works)
+- [Overview](#overview)
+- [Demo](#demo)
 
 ## UML Diagram:
 
@@ -36,6 +36,9 @@ This architecture not only enhances the responsiveness of the proxy server but a
 
 # Demo
 
-![cache1](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/447c9c1c-0600-4c24-ae07-4f8f1273f09b)
+![cache1](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/f1a26af8-eca4-4fcc-ac84-1c280c38b861)
 ![cache2](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/b0273da1-947c-4b4d-8df8-1d6dfed511d6)
+
+- When website is opened for the first time `(url not found)` then cache will be missed.
+- Then if you again open that website again then `Data is retrieved from the cache` will be printed.
 
