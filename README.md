@@ -72,3 +72,19 @@ This architecture not only enhances the responsiveness of the proxy server but a
 - When website is opened for the first time `(url not found)` then cache will be missed.
 - Then if you again open that website again then `Data is retrieved from the cache` will be printed.
 
+# How to Run
+
+```
+$ git clone https://github.com/thejediboySHASHANK/WebServerLRU.git
+$ cd WebServerLRU
+$ make all
+$ ./proxy <port no.>
+```
+
+- This code can only be ran in a Linux Machine or in WSL.
+- Please disable your browser cache.
+
+# Contributing
+
+Liked my project? Please feel free to star, raise a PR or fork to extend this project! 🚀
+
