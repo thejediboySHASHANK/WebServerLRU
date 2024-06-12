@@ -6,6 +6,8 @@ This project has been implemented utlising C programming langugaes, Data Structu
 - [Motivation and Need of the project](#motivation-and-need-of-the-project)
 - [Overview](#overview)
 - [Demo](#demo)
+- [How to Run](#how-to-run)
+- [Contributing](#contributing)
 
 ## UML Diagram:
 
