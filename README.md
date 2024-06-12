@@ -1,12 +1,16 @@
 # Multi Threaded Web Proxy Server with LRU Cache
 
-This project has been implemented utlising C programming langugaes, Data Structures and HTTP parsing library from Proxy Server
+This project has been implemented utlising C programming langugaes, Data Structures and HTTP parsing library from Proxy Server.
+
+## Table of Contents
+- [Key Features](#overview)
+- [How It Works](#how-it-works)
 
 ## UML Diagram:
 
 ![image](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/8ea4e464-c404-46f0-9859-f39e42511cad)
 
-# WebServerLRU
+# Overview
 
 **WebServerLRU** is a robust, multi-threaded web proxy server implemented in C. It leverages the POSIX threads (pthreads) library to manage multiple client requests concurrently, ensuring efficient handling of network traffic. The server integrates key concepts from operating systems such as semaphores and mutexes to securely manage concurrent access to shared resources.
 
