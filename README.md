@@ -36,7 +36,7 @@ This architecture not only enhances the responsiveness of the proxy server but a
 
 # Demo
 
-![cache1](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/f1a26af8-eca4-4fcc-ac84-1c280c38b861)
+![cache1](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/a4b89400-fa83-4a22-b4ec-0b8d04db2462)
 ![cache2](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/b0273da1-947c-4b4d-8df8-1d6dfed511d6)
 
 - When website is opened for the first time `(url not found)` then cache will be missed.
