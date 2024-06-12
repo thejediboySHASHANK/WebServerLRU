@@ -6,12 +6,25 @@ This project has been implemented utlising C programming langugaes, Data Structu
 
 ![image](https://github.com/thejediboySHASHANK/WebServerLRU/assets/95047201/8ea4e464-c404-46f0-9859-f39e42511cad)
 
-## Project Overview
+# WebServerLRU
 
-This C program is a multi-threaded proxy server with caching capabilities. It uses the POSIX threads (pthreads) library for multi-threading, allowing it to handle multiple client requests concurrently. The server uses semaphores and mutexes to manage concurrent access to shared resources, which are key concepts in operating systems.  
+**WebServerLRU** is a robust, multi-threaded web proxy server implemented in C. It leverages the POSIX threads (pthreads) library to manage multiple client requests concurrently, ensuring efficient handling of network traffic. The server integrates key concepts from operating systems such as semaphores and mutexes to securely manage concurrent access to shared resources.
 
-The server listens for incoming connections, accepts them, and creates a new thread to handle each connection. Each thread receives the client's HTTP request, parses it using the provided proxy_parse.h library, and forwards it to the appropriate remote server. The response from the remote server is then sent back to the client.  
+## Key Features
 
-The program also implements a cache to store responses. When a request is received, the server first checks if the response is already in the cache. If it is, the cached response is sent to the client. If not, the request is forwarded to the remote server, and the response is stored in the cache for future use. The cache uses a Least Recently Used (LRU) policy for cache replacement, which is implemented by tracking the access time of each cache element.  
+- **Multi-Threading**: Utilizes the pthreads library to enable simultaneous processing of multiple client requests.
+- **Concurrency Control**: Employs mutexes and semaphores to ensure safe access to shared resources among threads.
+- **HTTP Request Handling**: Each incoming connection triggers the creation of a new thread that processes the client's HTTP request using the `proxy_parse.h` library, and forwards it to the intended remote server.
+- **Response Caching**: Implements an LRU (Least Recently Used) caching mechanism to optimize response times. The server checks this cache before forwarding requests to the remote server, reducing latency and network load.
+- **Socket Programming**: Uses standard socket programming functions such as `socket()`, `bind()`, `listen()`, and `accept()` for server setup. Data transmission is handled through `send()` and `recv()` functions.
+- **DNS Resolution**: Incorporates `gethostbyname()` to resolve hostnames to IP addresses, facilitating the handling of HTTP requests to various domains.
 
-The server uses standard socket programming techniques in C, including the socket(), bind(), listen(), and accept() functions for setting up the server, and the send() and recv() functions for sending and receiving data. It also uses the gethostbyname() function to resolve hostnames to IP addresses
+## How It Works
+
+Upon launching, the server begins listening for incoming TCP connections. When a connection is established, it accepts the connection and spins off a new thread dedicated to handling that specific client. Each thread performs the following tasks:
+- Parses the client’s HTTP request.
+- Checks the cache for a stored response.
+- If cached, returns the response directly to the client.
+- If not cached, forwards the request to the designated remote server, retrieves the response, sends it back to the client, and stores it in the cache.
+
+This architecture not only enhances the responsiveness of the proxy server but also significantly reduces unnecessary network traffic by serving repeated requests directly from the cache.
